@@ -24,6 +24,7 @@ const App: React.FC = () => {
   return (
     <>
       <h1>Task Manager</h1>
+
       <div>
         <input
           type="text"
@@ -33,10 +34,11 @@ const App: React.FC = () => {
         />
         <button onClick={handleAddTask}>Add Task</button>
       </div>
+
       <ul>
         {tasks.map((task) => (
           <li key={task.id}>
-            {task.text}
+            <span>{task.text}</span>
             <button onClick={() => handleDeleteTask(task.id)}>Delete</button>
           </li>
         ))}
